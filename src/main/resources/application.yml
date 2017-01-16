@@ -19,4 +19,8 @@ spring:
       monitor:
         github:
           enabled: true
-    
+          
+security: 
+  user: 
+    name: root
+    password: s3cr3t

@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+management:
+  context-path: /cloud/admin
+
+logging:
+  level:
+     org.springframework.cloud: 'INFO'
+    
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/psathishcs/CloudCentralizedConfig.git
+          clone-on-start: true
+          basedir: target/config
+      monitor:
+        github:
+          enabled: true
+    

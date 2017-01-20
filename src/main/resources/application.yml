@@ -11,7 +11,6 @@ security:
     name: root
     password: s3cr3t
 
-
 logging:
   level:
      org.springframework.cloud: 'INFO'
@@ -28,8 +27,8 @@ spring:
       monitor:
         github:
           enabled: true
-
-# Rabbit Config  (using docker container)
-spring:
   rabbitmq:
     addresses: localhost:5672
+          
+
+ 

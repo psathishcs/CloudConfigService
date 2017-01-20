@@ -1,13 +1,22 @@
+# Configure Server Port
 server:
   port: 8888
 
 management:
   context-path: /cloud/admin
+  
+# Configure Security
+security: 
+  user: 
+    name: root
+    password: s3cr3t
+
 
 logging:
   level:
      org.springframework.cloud: 'INFO'
-    
+     
+# Configure git Repo - using the example repo    
 spring:
   cloud:
     config:
@@ -19,8 +28,8 @@ spring:
       monitor:
         github:
           enabled: true
-          
-security: 
-  user: 
-    name: root
-    password: s3cr3t
+
+# Rabbit Config  (using docker container)
+spring:
+  rabbitmq:
+    addresses: localhost:5672

@@ -19,7 +19,6 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.3.RELEASE")
-        classpath('se.transmode.gradle:gradle-docker:1.2')
     }
 }
 
@@ -27,26 +26,14 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'docker'
+
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 jar {
 	baseName = 'CloudConfigService'
-	version = '0.0.1-SNAPSHOT'
-}
-
-task buildDocker(type: Docker, dependsOn: build) {
-  push = true
-  applicationName = jar.baseName
-  dockerfile = file('Dockerfile')
-  doFirst {
-    copy {
-      from jar
-      into stageDir
-    }
-  }
+	version = '1.0.1-SNAPSHOT'
 }
 
 

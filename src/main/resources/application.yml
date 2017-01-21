@@ -4,18 +4,18 @@ server:
 
 management:
   context-path: /cloud/admin
-  
+
 # Configure Security
-security: 
-  user: 
+security:
+  user:
     name: root
     password: s3cr3t
 
 logging:
   level:
      org.springframework.cloud: 'INFO'
-     
-# Configure git Repo - using the example repo    
+
+# Configure git Repo - using the example repo
 spring:
   cloud:
     config:
@@ -28,10 +28,4 @@ spring:
         github:
           enabled: true
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-          
-
- 
+    host: rabbitmq
